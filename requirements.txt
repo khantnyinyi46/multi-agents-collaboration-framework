@@ -20,8 +20,6 @@ chromadb==1.1.1
 click==8.4.2
 colorama==0.4.6
 crewai
-crewai-core
-crewai-tools
 cryptography==49.0.0
 defusedxml==0.7.1
 deprecation==2.1.0
