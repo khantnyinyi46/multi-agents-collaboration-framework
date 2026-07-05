@@ -71,6 +71,9 @@ async def send_crew_result(background_tasks: BackgroundTasks, q:str|None):
     background_tasks.add_task(run_crew,q)
     return {"message": "Crew result sent"}
     
+@app.get("/")
+def read_root():
+    return {"Hello": "World from multi-agents-collaboration-framework"}
 
 # @app.post("/send-notification/{email}")
 # async def send_notification(
