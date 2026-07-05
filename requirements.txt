@@ -19,10 +19,10 @@ charset-normalizer==3.4.7
 chromadb==1.1.1
 click==8.4.2
 colorama==0.4.6
-crewai==1.15.1
-crewai-cli==1.15.1
-crewai-core==1.15.1
-crewai-tools==1.15.1
+crewai
+crewai-cli
+crewai-core
+crewai-tools
 cryptography==49.0.0
 defusedxml==0.7.1
 deprecation==2.1.0
