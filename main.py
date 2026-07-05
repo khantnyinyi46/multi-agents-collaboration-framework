@@ -73,7 +73,7 @@ async def send_crew_result(background_tasks: BackgroundTasks, q:str|None):
     
 @app.post("/test-api")
 def send_msg():
-    return {"Post from multi-agents-collaboration-framework"}
+    return {"message": "Post from multi-agents-collaboration-framework"}
 
 # @app.post("/send-notification/{email}")
 # async def send_notification(
