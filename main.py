@@ -1,10 +1,6 @@
 from fastapi import BackgroundTasks, Depends, FastAPI
 from pydantic import BaseModel
 from typing import Annotated
-
-app = FastAPI()
-
-from fastapi import FastAPI
 from crewai import Agent, Task, Crew, LLM
 
 app = FastAPI()
@@ -14,6 +10,9 @@ ollama_llm = LLM(
     model="ollama/llama3.1:8b",
 )
 
+class Message(BaseModel):
+    message:str
+    
 # Define agent — llm goes here, not "model"
 
 # Define task
@@ -72,8 +71,8 @@ async def send_crew_result(background_tasks: BackgroundTasks, q:str|None):
     return {"message": "Crew result sent"}
     
 @app.post("/test-api")
-def send_msg():
-    return {"message": "Post from multi-agents-collaboration-framework"}
+def send_msg(data:Message):
+    return {"message": f"Post from multi-agents-collaboration-framework - read this message - {data.message}"}
 
 # @app.post("/send-notification/{email}")
 # async def send_notification(
